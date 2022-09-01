@@ -13,6 +13,13 @@
 }
 
 @font-face {
+    font-family: "NeoSansCyrLight2";
+  src: url("../fonts/NeoSansCyr-LIght.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
     font-family: "NeoSansCyrLightItalic";
   src: url("../fonts/NeoSansCyr-LightItalic.woff") format("woff");
   font-weight: 400;
@@ -720,6 +727,8 @@ svg {
 
 .header .contactsContainer .languageContainer button {
     background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-family: "NeoSansCyrRegular";
+    font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.5rem;
     text-align: center;
@@ -971,6 +980,112 @@ svg {
     width: 3rem;
     height: 3rem;
     fill: #FFFFFF;
+}
+
+.closeContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: end;
+    width: 100%;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.closeContainer button {
+    border: none;
+    background: none;
+}
+
+.closeContainer button svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form input {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: rgba(96, 96, 96, 0.7);
+    font-family: "NeoSansCyrRegular";
+    padding-left: 1.5rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.7rem;
+}
+
+form input:focus {
+    outline: 0.3rem solid #008B73;
+}
+
+form .licenceContainer {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3.2rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    form .licenceContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: start;
+        justify-content: start;
+    }
+}
+
+form .licenceContainer .licence p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: #878787;
+}
+
+form .licenceContainer .licence p a {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #393246;
+}
+
+form .licenceContainer button {
+    background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #00372E;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    -webkit-filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 650px) {
+    form .licenceContainer button {
+        font-size: 1.5rem;
+    }
+}
+
+form .licenceContainer button svg {
+    fill: transparent;
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 /**
@@ -2409,6 +2524,7 @@ button.swiper-pagination-bullet {
 }
 
 .main .formContainer form div input {
+    font-family: "NeoSansCyrRegular";
     font-size: 1.6rem;
     line-height: 2.2rem;
     display: -ms-flexbox;
@@ -2447,6 +2563,7 @@ button.swiper-pagination-bullet {
 }
 
 .main .formContainer form button {
+    font-family: "NeoSansCyrRegular";
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -2576,20 +2693,17 @@ button.swiper-pagination-bullet {
     color: #00372E;
     font-family: "SourceSansPro";
     font-size: 5rem;
-    width: 40rem;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
     top: 29%;
     left: -22%;
 }
 
 @media (max-width: 1650px) {
     .main .geography .imgContainer .showCountry {
-        left: -14%;
-    }
-}
-
-@media (max-width: 1454px) {
-    .main .geography .imgContainer .showCountry {
-        left: -10%;
+        left: 77%;
+        top: 49%;
     }
 }
 
@@ -3130,6 +3244,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer .firstContainer button {
+    font-family: "NeoSansCyrRegular";
     display: -ms-flexbox;
     display: flex;
     width: -webkit-max-content;
@@ -3271,6 +3386,12 @@ button.swiper-pagination-bullet {
     color: #FFFFFF;
 }
 
+@media (max-width: 1024px) {
+    .underHeader .crumb {
+        padding-left: 1rem;
+    }
+}
+
 .underHeader .crumb a {
     font-family: "SourceSansPro2";
     font-size: 1.4rem;
@@ -3320,6 +3441,13 @@ button.swiper-pagination-bullet {
     padding-right: 21.5rem;
 }
 
+@media (max-width: 1024px) {
+    .aboutCompany .mainContainer .subtitle {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .aboutCompany .mainContainer .contentContainer {
     margin-top: 8.3rem;
     display: -ms-flexbox;
@@ -3330,6 +3458,12 @@ button.swiper-pagination-bullet {
     padding-bottom: 14.7rem;
 }
 
+@media (max-width: 850px) {
+    .aboutCompany .mainContainer .contentContainer {
+        gap: 4rem;
+    }
+}
+
 .aboutCompany .mainContainer .contentContainer .item {
     display: -ms-flexbox;
     display: flex;
@@ -3338,6 +3472,21 @@ button.swiper-pagination-bullet {
     gap: 4.5rem;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .aboutCompany .mainContainer .contentContainer .item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .aboutCompany .mainContainer .contentContainer .item {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 .aboutCompany .mainContainer .contentContainer .date {
@@ -3387,7 +3536,7 @@ button.swiper-pagination-bullet {
     text-transform: uppercase;
     color: #065749;
     padding-top: 3.1rem;
-    font-family: "NeoSansCyrRegular";
+    font-family: "NeoSansCyrMedium";
 }
 
 .services .subtitle {
@@ -3402,6 +3551,20 @@ button.swiper-pagination-bullet {
     padding-right: 21.5rem;
 }
 
+@media (max-width: 1330px) {
+    .services .subtitle {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services .subtitle {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
 .services .contentContainer {
     display: -ms-flexbox;
     display: flex;
@@ -3414,16 +3577,51 @@ button.swiper-pagination-bullet {
     padding-bottom: 4rem;
 }
 
+@media (max-width: 1330px) {
+    .services .contentContainer {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services .contentContainer {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
 .services .contentContainer .item {
     display: -ms-flexbox;
     display: flex;
     gap: 9.2rem;
 }
 
+@media (max-width: 1330px) {
+    .services .contentContainer .item {
+        gap: 4.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services .contentContainer .item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .services .contentContainer .item .imgContainer {
+        width: 100%;
+    }
+
+    .services .contentContainer .item .imgContainer img {
+        width: 100%;
+    }
+}
+
 .services .contentContainer .item .title {
     padding-top: 0rem;
     font-size: 2.4rem;
-    line-height: 1.6rem;
+    line-height: 2.6rem;
     color: #065749;
     text-align: inherit;
     font-family: "SourceSansPro";
@@ -3444,6 +3642,612 @@ button.swiper-pagination-bullet {
     line-height: 2.2rem;
     font-family: "NeoSansCyrRegular";
     color: #606060;
+}
+
+.products {
+    background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
+    padding-bottom: 15.3rem;
+}
+
+.products .title {
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #065749;
+    padding-top: 3.1rem;
+    font-family: "NeoSansCyrMedium";
+}
+
+.products .subtitle {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    mix-blend-mode: multiply;
+    font-family: "SourceSansPro";
+    padding-left: 21.5rem;
+    padding-right: 21.5rem;
+}
+
+@media (max-width: 1024px) {
+    .products .subtitle {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.products .navContainer {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 15.5rem;
+    padding-right: 15.5rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 8.5rem;
+    padding-bottom: 5.6rem;
+}
+
+@media (max-width: 1024px) {
+    .products .navContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .products .navContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        -ms-flex-pack: center;
+        justify-content: center;
+        row-gap: 2rem;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .products .navContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.products .navContainer button {
+    font-family: "SourceSansPro2";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 17%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.7rem;
+    background: none;
+    border: 0.1rem solid #606060;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #606060;
+}
+
+@media (max-width: 1330px) {
+    .products .navContainer button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 850px) {
+    .products .navContainer button {
+        width: 23%;
+    }
+}
+
+@media (max-width: 500px) {
+    .products .navContainer button {
+        width: 47%;
+    }
+}
+
+.products .navContainer button:hover {
+    background: #f6ead9;
+}
+
+.products .navContainer .active {
+    font-family: "SourceSansPro";
+    background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.03em;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #00372E;
+}
+
+.products .contentContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-column-gap: 9rem;
+    -moz-column-gap: 9rem;
+    column-gap: 9rem;
+    row-gap: 6.3rem;
+}
+
+.products .contentContainer .productItem {
+    text-decoration: none;
+    width: 23%;
+}
+
+@media (max-width: 850px) {
+    .products .contentContainer .productItem {
+        width: 43%;
+    }
+}
+
+@media (max-width: 500px) {
+    .products .contentContainer .productItem {
+        width: 95%;
+    }
+}
+
+.products .contentContainer .productItem .imgContainer img {
+    width: 100%;
+}
+
+.products .contentContainer .productItem .text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #606060;
+}
+
+.products .contentContainer .productItem:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.productsItem {
+    background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
+    padding-bottom: 18.5rem;
+}
+
+.productsItem .title {
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #065749;
+    padding-top: 3.1rem;
+    font-family: "NeoSansCyrMedium";
+}
+
+.productsItem .navContainer {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 15.5rem;
+    padding-right: 15.5rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 8.1rem;
+    margin-top: 5.3rem;
+}
+
+@media (max-width: 1024px) {
+    .productsItem .navContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .productsItem .navContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        -ms-flex-pack: center;
+        justify-content: center;
+        row-gap: 2rem;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .productsItem .navContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.productsItem .navContainer button {
+    font-family: "SourceSansPro2";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 17%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.7rem;
+    background: none;
+    border: 0.1rem solid #606060;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #606060;
+}
+
+@media (max-width: 1330px) {
+    .productsItem .navContainer button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 850px) {
+    .productsItem .navContainer button {
+        width: 23%;
+    }
+}
+
+@media (max-width: 500px) {
+    .productsItem .navContainer button {
+        width: 47%;
+    }
+}
+
+.productsItem .navContainer button:hover {
+    background: #f6ead9;
+}
+
+.productsItem .navContainer .active {
+    font-family: "SourceSansPro";
+    background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.03em;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #00372E;
+}
+
+.productsItem .contentContainer {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 13rem;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 1600px) {
+    .productsItem .contentContainer {
+        -ms-flex-pack: unset;
+        justify-content: unset;
+        padding-left: 15.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .productsItem .contentContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .productsItem .contentContainer {
+        gap: 3rem;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+.productsItem .contentContainer .imgContainer img {
+    width: 100%;
+}
+
+.productsItem .contentContainer .textContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.productsItem .contentContainer .textContainer .title {
+    font-family: "SourceSansPro";
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    color: #065749;
+    text-align: start;
+}
+
+.productsItem .contentContainer .textContainer .subtitle {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.productsItem .contentContainer .textContainer .subtitle p {
+    font-family: "SourceSansPro2";
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #606060;
+}
+
+.productsItem .contentContainer .textContainer .subtitle span {
+    font-family: "SourceSansPro";
+    color: #000000;
+}
+
+.contacts {
+    background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
+}
+
+.contacts .title {
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #065749;
+    padding-top: 3.1rem;
+    font-family: "NeoSansCyrMedium";
+}
+
+.contacts .subtitle {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    mix-blend-mode: multiply;
+    font-family: "SourceSansPro";
+    padding-left: 21.5rem;
+    padding-right: 21.5rem;
+}
+
+@media (max-width: 1024px) {
+    .contacts .subtitle {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.contacts .contentContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 23.2rem;
+    padding-right: 19.6rem;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 3.9rem;
+    padding-bottom: 16.7rem;
+}
+
+@media (max-width: 1330px) {
+    .contacts .contentContainer {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacts .contentContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .contacts .contentContainer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.contacts .contentContainer .leftContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.7rem;
+}
+
+@media (max-width: 850px) {
+    .contacts .contentContainer .leftContainer {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.contacts .contentContainer .leftContainer .item:last-child {
+    margin-top: 2rem;
+}
+
+.contacts .contentContainer .leftContainer .item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: "NeoSansCyrRegular";
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #606060;
+}
+
+.contacts .contentContainer .leftContainer .item .adress {
+    width: 38.8rem;
+}
+
+.contacts .contentContainer .leftContainer .item .watsUpIco {
+    width: 2.3rem;
+    height: 2.5rem;
+    fill: #B7975A;
+}
+
+.contacts .contentContainer .leftContainer .item .viberIco {
+    width: 2.3rem;
+    height: 2.6rem;
+    fill: #B7975A;
+    margin-left: 0.6rem;
+}
+
+.contacts .contentContainer .leftContainer .item .imgContainer .pointIco {
+    margin-right: 2.3rem;
+}
+
+.contacts .contentContainer .leftContainer .item .imgContainer .mailIco {
+    width: 2.8rem;
+    height: 1.9rem;
+    fill: #B7975A;
+    margin-right: 1.9rem;
+}
+
+.contacts .contentContainer .leftContainer .item .imgContainer .phoneIco {
+    width: 1.8rem;
+    height: 3.2rem;
+    fill: #B7975A;
+    margin-right: 2.3rem;
+}
+
+.contacts .contentContainer .leftContainer .item .phoneContainer {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.contacts .contentContainer .rightContainer {
+    width: 50%;
+}
+
+@media (max-width: 850px) {
+    .contacts .contentContainer .rightContainer {
+        width: 100%;
+    }
+}
+
+.contacts .contentContainer .rightContainer .title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #065749;
+    margin-bottom: 3.2rem;
+    padding-top: 0;
+}
+
+.contacts .contentContainer .rightContainer form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacts .contentContainer .rightContainer form input {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: rgba(96, 96, 96, 0.7);
+    font-family: "NeoSansCyrRegular";
+    padding-left: 1.5rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.7rem;
+}
+
+.contacts .contentContainer .rightContainer form input:focus {
+    outline: 0.3rem solid #008B73;
+}
+
+.contacts .contentContainer .rightContainer form .licenceContainer {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3.2rem;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+@media (max-width: 500px) {
+    .contacts .contentContainer .rightContainer form .licenceContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: start;
+        justify-content: start;
+    }
+}
+
+.contacts .contentContainer .rightContainer form .licenceContainer .licence p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: #878787;
+}
+
+.contacts .contentContainer .rightContainer form .licenceContainer .licence p a {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #393246;
+}
+
+.contacts .contentContainer .rightContainer form .licenceContainer button {
+    background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #00372E;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    -webkit-filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 650px) {
+    .contacts .contentContainer .rightContainer form .licenceContainer button {
+        font-size: 1.5rem;
+    }
+}
+
+.contacts .contentContainer .rightContainer form .licenceContainer button svg {
+    fill: transparent;
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 .hide {
